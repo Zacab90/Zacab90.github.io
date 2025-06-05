@@ -1,8 +1,38 @@
 /*
-                            Colors
-E8C547 (Saffron): Bright, attention-grabbing – ideal for buttons, icons, or key highlights.
-30323D (Jet): Deep and neutral – excellent as a primary background or nav bar color.
-4D5061 (Davy’s Gray): Muted and balanced – great for cards, secondary sections, or text backgrounds.
-5C80BC (Glaucous): Cool, professional – good for links, secondary buttons, or headers.
-CDD1C4 (Ash Gray): Soft and subtle – perfect for backgrounds or neutral padding areas
+  🎨 Color Palette
+  E8C547 (Saffron): Accents, highlights
+  30323D (Jet): Primary background
+  4D5061 (Davy’s Gray): Cards, secondary sections
+  5C80BC (Glaucous): Links, headers
+  CDD1C4 (Ash Gray): Neutral backgrounds
 */
+
+/* === NAVBAR === */
+.custom-navbar {
+  background-color: #30323D;
+  padding: 0.5rem 0;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #E8C547;
+}
+
+/* Wrap nav links on small screens */
+@media (max-width: 576px) {
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    margin: 0.25rem;
+  }
+}
