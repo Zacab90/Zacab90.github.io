@@ -6,94 +6,78 @@
   5C80BC (Glaucous): Links, headers
   CDD1C4 (Ash Gray): Neutral backgrounds
 */
-/* === HTML === */
+/* === BASE === */
 body {
-  background-color: #CDD1C4; /* Use any color you want */
+  background-color: #CDD1C4;
 }
 
-
-/* === NAVBAR === */
+/* === NAVBAR BANNER === */
 .custom-navbar {
-  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #30323D;
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 }
 
 .custom-navbar .nav-link {
   font-size: 1rem;
   color: #ffffff;
   font-weight: 600;
-  padding: 1rem 1rem;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
 }
 
 .custom-navbar .nav-link:hover {
   color: #E8C547;
 }
 
-.custom-navbar .container {
-  background-color: #30323D;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-}
-
-/* Mobile */
-@media (max-width: 576px) {
+/* Mobile: centered, small banner */
+@media (max-width: 767.98px) {
   .custom-navbar {
-    display: none;
+    max-width: 90%;
+    margin: 1rem auto;
+    border-radius: 1rem;
   }
 }
 
-/* === HERO === */
-
-
-
-
-
-
-
-
-/* === EXTRAS === */
-/* Underline animation */
-.anim-underline-fx {
-  background-image: linear-gradient(to right, #E8C547, #E8C547);
-  background-size: 0 3px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  transition: background-size 0.3s;
+/* Desktop: full-width banner */
+@media (min-width: 768px) {
+  .custom-navbar {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 
-.anim-underline-fx:hover {
-  background-size: 100% 3px;
+@media (max-width: 576px) {
+  .custom-navbar .nav-link {
+    font-size: 0.8rem; /* smaller for mobile */
+    padding: 0.4rem 0.7rem;
+  }
 }
 
-.anim-bg-gradient {
-  background: linear-gradient(120deg, #E8C547, #5C80bC, #CDD1C4);
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  transition: background-position .5s;
+
+
+/* === HERO IMAGE === */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.anim-bg-gradient:hover {
-  background-position: 0 0;
+@media (max-width: 576px) {
+  .hero-img {
+    max-height: 200px;
+  }
 }
 
-/* Image perspective */
-.div-persp {
-  perspective: 1500px; 
-}
-
-.img-persp-left {
-  transform: translateZ(20px) rotateY(10deg); 
-    border-radius: 0.375em;
-box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
-}
-
-.img-persp-right {
-  transform: translateZ(20px) rotateY(-10deg);
-  border-radius: 0.375em;
-  box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
-}
-
-/* Fade In */
+/* === FADE IN EFFECT === */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -104,5 +88,16 @@ box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.fade-in-nav {
+  opacity: 0;
+  animation: fadeInNav 1.2s ease-out forwards;
+}
+
+@keyframes fadeInNav {
+  to {
+    opacity: 1;
   }
 }
