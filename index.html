@@ -36,7 +36,7 @@
             </div>
 
             <!-- Hero Text -->
-            <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start">
+            <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start" data-animate>
                 <h2>Hello, I'm Zachary Bellerose</h2>
                 <p>I’m a Software Developer Intern who loves turning ideas into functional code and learning something
                     new every day.</p>
@@ -46,24 +46,67 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a Computer Science student at Cégep Gérald-Godin, currently interning as a Software Developer at
-            Nomadis. I enjoy solving problems with code, learning new technologies, and collaborating on real-world
-            projects. My goal is to keep growing as a developer, gain hands-on experience, and eventually build and
-            publish my own video games. Outside of programming, I’m always exploring new ideas, whether through code,
-            games, or creative projects.
-        </p>
+    <section id="about" class="container py-5" data-animate>
+
+        <!-- Top Row: Text + Nomadis image -->
+        <div class="row align-items-center mb-5">
+            <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                <h2 class="mb-3">About Me</h2>
+                <p>
+                    I'm a Computer Science student at <strong>Cégep Gérald-Godin</strong> and a Software Developer
+                    Intern at <strong>Nomadis</strong>. I love turning ideas into functional code and building
+                    real-world solutions.
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <img src="img/nomadis.jpg" alt="Nomadis workplace" class="img-fluid rounded shadow-sm about-photo-top">
+            </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                <img src="img/uncharted.jpg" alt="Gaming" class="img-fluid rounded shadow-sm about-photo-side">
+            </div>
+
+            <div class="col-12 col-md-8 text-start">
+                <p>
+                    I'm passionate about learning, collaboration, and game development. One day, I hope to design and
+                    release a game of my own —
+                    built from scratch. Whether it’s building web apps or 3D game environments, I enjoy creating things
+                    that work and inspire.
+                </p>
+                <p>
+                    When I’m not building or debugging something, you’ll probably find me on a trail with a backpack,
+                    chasing a good view.
+                </p>
+                <p class="mt-3 text-md-start">
+                    Lately, I’ve been exploring WebGL, improving my JavaScript game engine skills, and looking for ways
+                    to blend visual design with interactive storytelling.
+                </p>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <!-- You can add another image or leave empty -->
+            </div>
+        </div>
+
+        <!--  Mountains Image  -->
+        <div class="row">
+            <div class="col-12">
+                <img src="img/mountains.jpg" alt="Mountain landscape" class="img-fluid rounded shadow-sm mt-4"
+                    style="width: 100%; height: 200px; object-fit: cover; object-position: center 10%;">
+            </div>
+        </div>
+
     </section>
+
+
+
+
+
 
     <!-- Projects Section -->
     <section id="projects">
