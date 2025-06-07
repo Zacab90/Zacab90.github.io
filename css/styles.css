@@ -55,7 +55,8 @@ body {
 
 @media (max-width: 576px) {
   .custom-navbar .nav-link {
-    font-size: 0.8rem; /* smaller for mobile */
+    font-size: 0.8rem;
+    /* smaller for mobile */
     padding: 0.4rem 0.7rem;
   }
 }
@@ -79,30 +80,35 @@ body {
 
 /* === ABOUT SECTION === */
 #about {
-  background-color: #4D5061; /* Davy’s Gray: subtle card-like background */
-  color: #ffffff;            /* Make text readable over dark bg */
+  background-color: #4D5061;
+  /* Davy’s Gray: subtle card-like background */
+  color: #ffffff;
+  /* Make text readable over dark bg */
   border-radius: 1rem;
   padding: 3rem 2rem;
 }
 
 /* Title */
 #about h2 {
-  color: #E8C547; /* Saffron highlight */
+  color: #E8C547;
+  /* Saffron highlight */
   font-size: 2rem;
   font-weight: 600;
 }
 
 /* Optional subtitle */
 .about-subtitle {
-  color: #5C80BC; /* Glaucous for secondary header */
+  color: #5C80BC;
+  /* Glaucous for secondary header */
   font-style: italic;
   margin-bottom: 1.5rem;
 }
 
 /* Paragraphs */
 #about p {
-  font-size: 1.0625rem;  /* ≈17px */
-  line-height: 1.75;    
+  font-size: 1.0625rem;
+  /* ≈17px */
+  line-height: 1.75;
   color: #f0f0f0;
 }
 
@@ -149,11 +155,22 @@ body {
 }
 
 @media (max-width: 576px) {
-  #about h2 {
-    font-size: 1.5rem;  
+  #about {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    /* center horizontally */
+    width: calc(100% - 1rem);
+    /* allow a small gap on both sides */
+    border-radius: 1rem;
   }
+
+  #about h2 {
+    font-size: 1.5rem;
+  }
+
   #about p {
-    font-size: 1rem;  
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
 
@@ -203,9 +220,11 @@ body {
 .fade-delay-1 {
   transition-delay: 0.3s;
 }
+
 .fade-delay-2 {
   transition-delay: 0.6s;
 }
+
 .fade-delay-3 {
   transition-delay: 0.9s;
 }
@@ -220,5 +239,6 @@ body {
 .about-photo-side:hover,
 .about-photo-top:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 24px #E8C547; /* Glaucous blue */
+  box-shadow: 0 8px 24px #E8C547;
+  /* Glaucous blue */
 }
