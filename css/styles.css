@@ -90,8 +90,6 @@ body {
 
 /* Title */
 #about h2 {
-  color: #E8C547;
-  /* Saffron highlight */
   font-size: 2rem;
   font-weight: 600;
 }
@@ -158,9 +156,7 @@ body {
   #about {
     padding: 2rem 1rem;
     margin: 0 auto;
-    /* center horizontally */
     width: calc(100% - 1rem);
-    /* allow a small gap on both sides */
     border-radius: 1rem;
   }
 
@@ -174,9 +170,145 @@ body {
   }
 }
 
+/* === Projects === */
+
+.card-img-top {
+  height: 200px; 
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#projects {
+  background-color: #CDD1C4; /* Ash Gray */
+  border-radius: 1rem;
+}
+
+/* Project Card Styling */
+.card {
+  background-color: #4D5061; /* Davy’s Gray */
+  color: #f0f0f0;
+  border: none;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.card-title {
+  font-weight: 600;
+}
+
+/* Paragraph Text */
+.card-text {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+/* Card Image */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  filter: brightness(85%);
+}
+
+/* Buttons */
+.card .btn {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.card:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-outline-primary {
+  color: #5C80BC;
+  border-color: #5C80BC;
+}
+
+.btn-outline-primary:hover {
+  background-color: #5C80BC;
+  color: #fff;
+}
+
+.btn-outline-dark {
+  color: #30323D;
+  border-color: #30323D;
+}
+
+.btn-outline-dark:hover {
+  background-color: #30323D;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  /* Disable hover-based transitions */
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card:hover .card-img-top {
+    filter: none;
+  }
+
+  .card .btn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* === Data === */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Fade in effects === */
+.fade-delay-1 {
+  transition-delay: 0.3s;
+}
+
+.fade-delay-2 {
+  transition-delay: 0.6s;
+}
+
+.fade-delay-3 {
+  transition-delay: 0.9s;
+}
 
 /* === FADE IN EFFECT === */
 .fade-in {
@@ -201,44 +333,4 @@ body {
   to {
     opacity: 1;
   }
-}
-
-
-/* === Data === */
-
-[data-animate] {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-[data-animate].visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-delay-1 {
-  transition-delay: 0.3s;
-}
-
-.fade-delay-2 {
-  transition-delay: 0.6s;
-}
-
-.fade-delay-3 {
-  transition-delay: 0.9s;
-}
-
-
-/* === Clipping effect === */
-.about-photo-side,
-.about-photo-top {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.about-photo-side:hover,
-.about-photo-top:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 24px #E8C547;
-  /* Glaucous blue */
 }
