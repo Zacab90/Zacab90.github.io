@@ -182,14 +182,16 @@ body {
 
 #projects {
   background-color: #CDD1C4;
-  /* Ash Gray */
   border-radius: 1rem;
 }
 
-/* Project Card Styling */
+#projects h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 .card {
   background-color: #4D5061;
-  /* Davy’s Gray */
   color: #f0f0f0;
   border: none;
   border-radius: 0.75rem;
@@ -201,18 +203,20 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Title */
+.card-title,
+.card-text {
+  text-align: left;
+}
+
 .card-title {
   font-weight: 600;
 }
 
-/* Paragraph Text */
 .card-text {
   font-size: 0.95rem;
   color: #e0e0e0;
 }
 
-/* Card Image */
 .card-img-top {
   height: 200px;
   object-fit: cover;
@@ -223,7 +227,6 @@ body {
   filter: brightness(85%);
 }
 
-/* Buttons */
 .card .btn {
   border: 2px solid #5C80BC;
   color: #5C80BC;
@@ -276,7 +279,10 @@ body {
 }
 
 .project-card {
-  height: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   border-radius: 0.75rem;
   overflow: hidden;
   position: relative;
@@ -296,37 +302,19 @@ body {
 }
 
 .card-img-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1));
-  color: white;
-  z-index: 2;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   padding: 1rem;
-  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-}
-
-.project {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.project h3,
-.project p {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  height: 100%;
 }
 
 @media (max-width: 576px) {
-
-  /* Disable hover-based transitions */
   .card:hover {
     transform: none;
     box-shadow: none;
@@ -347,6 +335,10 @@ body {
 
   .card-text {
     font-size: 0.85rem;
+  }
+
+  .project-card {
+    height: auto;
   }
 }
 
