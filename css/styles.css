@@ -365,6 +365,12 @@ body {
   margin-left: 1rem;
   color: #0A84FF;
   font-size: 1.1rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+#skills li:hover i {
+  transform: translateX(4px);
 }
 
 [data-animate] {
