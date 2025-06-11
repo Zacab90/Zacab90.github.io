@@ -209,15 +209,48 @@
 
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="#" method="post">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<section id="contact" class="container py-5" data-animate>
+  <h2 class="text-center mb-5">Contact Me</h2>
+
+  <div class="row justify-content-center">
+    <!-- Contact Form -->
+    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+      <form class="contact-form glass-card">
+        <h3>Email me</h3>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <div class="send-btn-wrapper">
+          <button type="submit" class="btn btn-glass">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Column: Socials + CV -->
+    <div class="col-12 col-lg-4 d-flex flex-column align-items-center align-items-lg-start">
+      <!-- Socials -->
+      <div class="social-links-box glass-card w-100">
+        <h3 class="text-center">Find Me Online</h3>
+        <div class="social-links d-flex justify-content-center gap-3">
+          <a href="#"><i class="bi bi-github"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- CV Download -->
+      <div class="cv-download glass-card w-100 text-center">
+        <h4>Download My CV</h4>
+        <div class="d-flex flex-column gap-2 ">
+          <a href="docs/CV_French.pdf" class="btn btn-glass w-100" download>Télécharger en Français</a>
+          <a href="docs/CV_English.pdf" class="btn btn-glass w-100" download>Download in English</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Footer -->
   <footer>
