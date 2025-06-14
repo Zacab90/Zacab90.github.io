@@ -52,62 +52,62 @@
 
   <!-- About Section -->
   <section id="about" class="container py-5" data-animate>
-    <!-- Top Row: Text + Nomadis image -->
-    <div class="row align-items-center mb-5">
-      <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
-        <h2 class="mb-3">About Me</h2>
-        <p>
-          I'm a Computer Science student at <strong>Cégep Gérald-Godin</strong> and a Software Developer
-          Intern at <strong>Nomadis</strong>. I love turning ideas into functional code and building
-          real-world solutions.
-        </p>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <img src="img/nomadis.jpg" alt="Nomadis workplace" class="img-fluid rounded shadow-sm about-photo-top">
-      </div>
-    </div>
-
-    <!-- Bottom Row -->
-    <div class="row align-items-center mb-4 ">
-      <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
-        <img src="img/uncharted.jpg" alt="Gaming" class="img-fluid rounded shadow-sm about-photo-side"
-          style="width: 70%; height: 200px;">
-      </div>
-
-      <div class="col-12 col-md-8 text-start">
-        <p>
-          I'm passionate about learning, collaboration, and game development. One day, I hope to design and
-          release a game of my own —
-          built from scratch. Whether it’s building web apps or 3D game environments, I enjoy creating things
-          that work and inspire.
-        </p>
-        <p>
-          When I’m not building or debugging something, you’ll probably find me on a trail with a backpack,
-          chasing a good view.
-        </p>
-        <p class="mt-3 text-md-start">
-          Lately, I’ve been exploring WebGL, improving my JavaScript game engine skills, and looking for ways
-          to blend visual design with interactive storytelling.
-        </p>
-      </div>
-
-      <div class="col-12 col-md-3">
-        <!-- You can add another image or leave empty -->
-      </div>
-    </div>
-
-    <!--  Mountains Image  -->
-    <div class="rowc">
+    <div class="row">
       <div class="col-12">
-        <img src="img/mountains.jpg" alt="Mountain landscape" class="img-fluid rounded shadow-sm mt-4"
-          style="width: 100%; height: 200px; object-fit: cover; object-position: center 10%;">
+        <div class="glass-card">
+          <div class="row align-items-center mb-5">
+            <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
+              <h2 class="mb-3">About Me</h2>
+              <p>
+                I'm a Computer Science student at <strong>Cégep Gérald-Godin</strong> and a Software Developer Intern at
+                <strong>Nomadis</strong>. I love turning ideas into functional code and building real-world solutions.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <img src="img/nomadis.jpg" alt="Nomadis workplace" class="img-fluid rounded shadow-sm about-photo-top">
+            </div>
+          </div>
+
+          <!-- Bottom Row -->
+          <div class="row align-items-center mb-4">
+            <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+              <img src="img/uncharted.jpg" alt="Gaming" class="img-fluid rounded shadow-sm about-photo-side"
+                style="width: 70%; height: 200px;">
+            </div>
+
+            <div class="col-12 col-md-8 text-start">
+              <p>
+                I'm passionate about learning, collaboration, and game development. One day, I hope to design and
+                release a game of my own — built from scratch.
+                Whether it’s building web apps or 3D game environments, I enjoy creating things that work and inspire.
+              </p>
+              <p>
+                When I’m not building or debugging something, you’ll probably find me on a trail with a backpack,
+                chasing a good view.
+              </p>
+              <p class="mt-3 text-md-start">
+                Lately, I’ve been exploring WebGL, improving my JavaScript game engine skills, and looking for ways to
+                blend visual design with interactive storytelling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mountains -->
+          <div class="row">
+            <div class="col-12">
+              <img src="img/mountains.jpg" alt="Mountain landscape" class="img-fluid rounded shadow-sm mt-4"
+                style="width: 100%; height: 200px; object-fit: cover; object-position: center 10%;">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+
   <!-- Projects Section -->
-  <section id="projects" class="container py-5">
+  <!-- <section id="projects" class="container py-5">
     <h2 class="text-center mb-5 fade-delay-1" data-animate>Projects</h2>
     <div class="row g-4 fade-delay-2" data-animate>
       <div class="col-12 col-md-6 col-lg-4">
@@ -162,95 +162,91 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Skills Section -->
   <section id="skills" class="container py-5" data-animate>
-    <h2 data-animate class="fade-delay-1">Skills</h2>
-    <div class="skills-grid">
-      <div>
-        <h3 data-animate class="fade-delay-2">Frontend</h3>
-        <ul data-animate class="fade-delay-3">
-          <li>HTML <i class="bi bi-code-slash"></i></li>
-          <li>CSS <i class="bi bi-filetype-css"></i></li>
-          <li>JavaScript <i class="bi bi-filetype-js"></i></li>
-          <li>Bootstrap <i class="bi bi-bootstrap"></i></li>
-        </ul>
-      </div>
-      <div>
-        <h3 data-animate class="fade-delay-2">Backend</h3>
-        <ul data-animate class="fade-delay-3">
-          <li>PHP <i class="bi bi-filetype-php"></i></li>
-          <li>SQL (MySQL) <i class="bi bi-database"></i></li>
-          <li>C# <i class="bi bi-filetype-cs"></i></li>
-          <li>Java <i class="bi bi-cup-hot"></i></li>
-        </ul>
-      </div>
-      <div>
-        <h3 data-animate class="fade-delay-2">Tools & Platforms</h3>
-        <ul data-animate class="fade-delay-3">
-          <li>Git & GitHub / GitLab <i class="bi bi-git"></i></li>
-          <li>VS Code / Visual Studio <i class="bi bi-microsoft"></i></li>
-          <li>Unity <i class="bi bi-unity"></i></li>
-          <li>Godot <i class="bi bi-joystick"></i></li>
-        </ul>
-      </div>
-      <div>
-        <h3 data-animate class="fade-delay-2">Other</h3>
-        <ul data-animate class="fade-delay-3">
-          <li>OOP <i class="bi bi-diagram-3"></i></li>
-          <li>Linux / Terminal <i class="bi bi-terminal"></i></li>
-        </ul>
+    <div class="glass-card">
+      <h2 class="d-flex justify-content-center fade-delay-1" data-animate>Skills</h2>
+      <div class="row">
+        <div class="col-12">
+          <div class="skills-grid">
+            <div>
+              <h3 data-animate class="fade-delay-2">Frontend</h3>
+              <ul data-animate class="fade-delay-3">
+                <li>HTML <i class="bi bi-code-slash"></i></li>
+                <li>CSS <i class="bi bi-filetype-css"></i></li>
+                <li>JavaScript <i class="bi bi-filetype-js"></i></li>
+                <li>Bootstrap <i class="bi bi-bootstrap"></i></li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-animate class="fade-delay-2">Backend</h3>
+              <ul data-animate class="fade-delay-3">
+                <li>PHP <i class="bi bi-filetype-php"></i></li>
+                <li>SQL (MySQL) <i class="bi bi-database"></i></li>
+                <li>C# <i class="bi bi-filetype-cs"></i></li>
+                <li>Java <i class="bi bi-cup-hot"></i></li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-animate class="fade-delay-2">Tools & Platforms</h3>
+              <ul data-animate class="fade-delay-3">
+                <li>Git & GitHub / GitLab <i class="bi bi-git"></i></li>
+                <li>VS Code / Visual Studio <i class="bi bi-microsoft"></i></li>
+                <li>Unity <i class="bi bi-unity"></i></li>
+                <li>Godot <i class="bi bi-joystick"></i></li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-animate class="fade-delay-2">Other</h3>
+              <ul data-animate class="fade-delay-3">
+                <li>OOP <i class="bi bi-diagram-3"></i></li>
+                <li>Linux / Terminal <i class="bi bi-terminal"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-
-
-
   <!-- Contact Section -->
-<section id="contact" class="container py-5" data-animate>
-  <h2 class="text-center mb-5">Contact Me</h2>
-
-  <div class="row justify-content-center">
-    <!-- Contact Form -->
-    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
-      <form class="contact-form glass-card">
-        <h3>Email me</h3>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="4" required></textarea>
-        <div class="send-btn-wrapper">
-          <button type="submit" class="btn btn-glass">Send</button>
-        </div>
-      </form>
-    </div>
-
-    <!-- Right Column: Socials + CV -->
-    <div class="col-12 col-lg-4 d-flex flex-column align-items-center align-items-lg-start">
-      <!-- Socials -->
-      <div class="social-links-box glass-card w-100">
-        <h3 class="text-center">Find Me Online</h3>
-        <div class="social-links d-flex justify-content-center gap-3">
-          <a href="#"><i class="bi bi-github"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-        </div>
+  <section id="contact" class="container py-5" data-animate>
+    <h2 class="text-center mb-5">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+        <form class="contact-form glass-card">
+          <h3>Email me</h3>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <div class="send-btn-wrapper">
+            <button type="submit" class="btn btn-glass">Send</button>
+          </div>
+        </form>
       </div>
 
-      <!-- CV Download -->
-      <div class="cv-download glass-card w-100 text-center">
-        <h4>Download My CV</h4>
-        <div class="d-flex flex-column gap-2 ">
-          <a href="docs/CV_French.pdf" class="btn btn-glass w-100" download>Télécharger en Français</a>
-          <a href="docs/CV_English.pdf" class="btn btn-glass w-100" download>Download in English</a>
+      <div class="col-12 col-lg-4 d-flex flex-column align-items-center align-items-lg-start">
+        <div class="social-links-box glass-card w-100">
+          <h3 class="text-center">Find Me Online</h3>
+          <div class="social-links d-flex justify-content-center gap-3">
+            <a href="#"><i class="bi bi-github"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="cv-download glass-card w-100 text-center">
+          <h4>Download My CV</h4>
+          <div class="d-flex flex-column gap-2 ">
+            <a href="docs/CV_French.pdf" class="btn btn-glass w-100" download>Télécharger en Français</a>
+            <a href="docs/CV_English.pdf" class="btn btn-glass w-100" download>Download in English</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Footer -->
   <footer>
