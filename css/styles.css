@@ -74,14 +74,6 @@ body {
 }
 
 /* === About === */
-
-#about {
-  background-color: #2C2C2E;
-  color: #F2F2F7;
-  border-radius: 1rem;
-  padding: 3rem 2rem;
-}
-
 #about h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -128,9 +120,10 @@ body {
     max-height: 140px;
   }
 
-  #about {
-    padding: 2rem 1rem;
+  .glass-card {
+    padding: 1.5rem 1rem;
   }
+
 
   #about h2 {
     font-size: 1.6rem;
@@ -139,9 +132,7 @@ body {
 
 @media (max-width: 576px) {
   #about {
-    padding: 2rem 1rem;
     margin: 0 auto;
-    width: calc(100% - 1rem);
     border-radius: 1rem;
   }
 
@@ -154,8 +145,6 @@ body {
     line-height: 1.6;
   }
 }
-
-
 
 /* === Projects === */
 
@@ -330,15 +319,6 @@ body {
 }
 
 /* === Skills === */
-
-#skills {
-  background-color: #2C2C2E;
-  color: #F2F2F7;
-  padding: 3rem 2rem;
-  border-radius: 1rem;
-  text-align: center;
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -473,7 +453,7 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #2C2C2E;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
@@ -481,10 +461,7 @@ body {
   padding: 2rem;
   color: #F2F2F7;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  margin: 2rem auto;
 }
-
-
 
 .btn-glass {
   align-self: flex-end;
