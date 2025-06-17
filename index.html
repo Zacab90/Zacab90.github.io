@@ -131,7 +131,7 @@
                         <div class="mt-2">
                             <a href="https://zacab90.itch.io/magasin"
                                 class="btn btn-alt btn-outline-primary btn-sm me-2">Itch.io</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                            <!-- <a href="#" class="btn btn-outline-light btn-sm">GitHub</a> -->
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                             teleporters.
                         </p>
                         <div class="mt-2">
-                            <a href="#" class="btn btn-alt btn-outline-primary btn-sm me-2">Live Demo</a>
+                            <!-- <a href="#" class="btn btn-alt btn-outline-primary btn-sm me-2">Live Demo</a> -->
                             <a href="https://github.com/bblanc03/3D-projet2"
                                 class="btn btn-outline-light btn-sm">GitHub</a>
                         </div>
@@ -169,8 +169,9 @@
                             creation, filtering, pagination, and full MVC structure.
                         </p>
                         <div class="mt-2">
-                            <a href="#" class="btn btn-alt btn-outline-primary btn-sm me-2">Live Demo</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                            <!-- <a href="#" class="btn btn-alt btn-outline-primary btn-sm me-2">Live Demo</a> -->
+                            <a href="https://github.com/AdamsConquest/projet3"
+                                class="btn btn-outline-light btn-sm">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -230,17 +231,19 @@
         <h2 class="text-center mb-5 fade-delay-1" data-animate>Contact Me</h2>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8 mb-4 mb-lg-0 fade-delay-2" data-animate>
-                <form class="contact-form glass-card">
-                    <h3>Email me</h3>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                <form class="contact-form glass-card" action="https://formspree.io/f/myzjjryz" method="POST">
+                    <input type="hidden" name="_redirect" value="https://zacab90.github.io/Zacab90.github.io/thank-you.html">
+                    <h3 class="text-center">Email me</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <input type="hidden" name="_subject" value="New message from your portfolio!">
+                    <input type="text" name="_gotcha" style="display:none">
                     <div class="send-btn-wrapper">
                         <button type="submit" class="btn btn-glass">Send</button>
                     </div>
                 </form>
             </div>
-
             <div class="col-12 col-lg-4 d-flex flex-column align-items-center align-items-lg-start fade-delay-2"
                 data-animate="">
                 <div class="social-links-box glass-card w-100">
