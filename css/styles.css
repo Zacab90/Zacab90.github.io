@@ -321,7 +321,7 @@ body {
 /* === Skills === */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   text-align: left;
@@ -330,6 +330,7 @@ body {
 #skills h3 {
   color: #0A84FF;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 #skills ul {
@@ -346,6 +347,8 @@ body {
   border-radius: 8px;
   margin-bottom: 0.5rem;
   font-size: 1rem;
+  min-width: 180px;
+  min-height: 60px;
 }
 
 #skills li i {
@@ -487,4 +490,16 @@ footer .bi:hover {
 .btn-glass:hover {
   background-color: #0A84FF;
   color: #fff;
+}
+
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
