@@ -314,7 +314,7 @@ body {
   }
 
   .project-card {
-    height: auto;
+    min-height: fit-content;
   }
 }
 
