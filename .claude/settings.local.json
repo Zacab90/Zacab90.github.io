@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Start-Process *)",
+      "PowerShell(Start-Process \"D:\\\\Portfolio\\\\Portfolio.dc.html\")"
+    ]
+  }
+}
