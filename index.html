@@ -1,375 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal portfolio of Zachary Bellerose - Developer" />
-    <title> Zachary Bellerose</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
-
 <body>
-    <!-- Header / Navigation -->
-    <nav class="custom-navbar fade-in-nav">
-        <div class="container d-flex justify-content-center gap-4">
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#contact">Contact</a>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</helmet>
+
+<div style="--bg:{{ vars.bg }};--fg:{{ vars.fg }};--muted:{{ vars.muted }};--surface:{{ vars.surface }};--border:{{ vars.border }};--accent:{{ vars.accent }};--accentSoft:{{ vars.accentSoft }};--onAccent:{{ vars.onAccent }};--chipBorder:{{ vars.chipBorder }};--tinyBg:{{ vars.tinyBg }};--tinyFg:{{ vars.tinyFg }}" class="portfolio" data-screen-label="Portfolio">
+<div class="portfolio-inner">
+
+<header class="header">
+  <div class="header-logo">zachary_bellerose</div>
+  <div class="header-nav">
+    <a href="mailto:zacbellerose@gmail.com">email</a>
+    <a href="https://linkedin.com/in/zachary-bellerose" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://github.com/Zacab90" target="_blank" rel="noopener">github</a>
+    <div onClick="{{ toggleTheme }}" class="theme-toggle">{{ themeLabel }}</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="section-label">&gt; whoami</div>
+  <h1 class="hero-title">Full-stack developer shipping production code across legacy and modern systems.</h1>
+  <p class="hero-desc">Hands-on experience maintaining and building enterprise codebases — heading into Concordia's cybersecurity engineering program this fall.</p>
+  <div class="hero-actions">
+    <a href="mailto:zacbellerose@gmail.com" onClick="{{ handleContactClick }}" class="btn-primary">{{ contactLabel }}</a>
+    <a href="./Resume_EN.pdf" download class="btn-secondary">download_cv()</a>
+  </div>
+</section>
+
+<section class="experience">
+  <div class="section-label">&gt; experience</div>
+  <div class="experience-header">
+    <div class="experience-title">Software Developer Intern</div>
+    <div class="experience-meta">Nomadis &middot; Montreal, QC</div>
+  </div>
+  <div class="experience-duration">May 2025 &ndash; Aug 2025 &amp;&amp; Mar 2026 &ndash; Aug 2026</div>
+  <p class="experience-subtitle">Travel &amp; workforce management software company</p>
+  <ul class="experience-list">
+    <li>Shipped features and fixes across two production codebases: legacy ASP.NET WebForms and a modern ASP.NET Core API</li>
+    <li>Resolved critical production bugs under tight deadline pressure</li>
+    <li>Built a localization feature spanning multiple internal services</li>
+    <li>Improved API documentation and type safety across projects</li>
+    <li>Refactored core business logic to improve flexibility and maintainability</li>
+    <li>Performed code reviews and maintained merge requests as part of a collaborative dev team</li>
+    <li>Worked in a Windows/PowerShell/Docker environment with Git-based workflows</li>
+  </ul>
+</section>
+
+<section class="education">
+  <div>
+    <div class="section-label">&gt; education</div>
+    <div class="education-title">BEng Cybersecurity, Concordia University</div>
+    <div class="education-desc">Starting Fall 2026 &middot; Canada's first undergraduate cybersecurity engineering degree</div>
+  </div>
+  <div class="education-badge">in_progress</div>
+</section>
+
+<section class="projects">
+  <div class="section-label section-label--featured">&gt; projects --featured</div>
+
+  <div class="featured-list">
+
+    <div class="project-card">
+      <img src="./images/petitespuces.png" alt="Les Petites Puces storefront" class="project-img">
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-title">Les Petites Puces</div>
+          <div class="project-chips">
+            <span class="chip">React</span>
+            <span class="chip">ASP.NET Core</span>
+            <span class="chip">SQL</span>
+          </div>
         </div>
-    </nav>
+        <p class="project-desc">Full-stack e-commerce platform built with a team of 4: auth, vendor management, product catalog, shopping cart.</p>
+        <div class="project-proof">proves &rarr; full-stack range + collaborative dev workflow</div>
+        <a href="https://424r.cgodin.qc.ca/" target="_blank" rel="noopener" class="project-link">view_live &rarr;</a>
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="container min-vh-100 d-flex align-items-center justify-content-center fade-in">
-        <div class="row align-items-center text-center text-md-start">
-            <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0 wrapper">
-                <figure class="figure">
-                    <img src="img/wild.jpg" class="img-fluid hero-img" alt="Zachary">
-                </figure>
-            </div>
-            <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start" data-animate>
-                <h2>Hello, I'm Zachary Bellerose</h2>
-                <p>I’m a Software Developer Intern who loves turning ideas into functional code and learning something
-                    new every day.</p>
-                <a href="#projects" class="btn btn-primary mt-3">View My Work</a>
-            </div>
+    <div class="project-card">
+      <img src="./images/panthos.png" alt="Panthos landing page" class="project-img project-img--center">
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-title">Panthos</div>
+          <div class="project-chips">
+            <span class="chip">React</span>
+            <span class="chip">Mailchimp</span>
+            <span class="chip">Netlify</span>
+          </div>
         </div>
-    </section>
+        <p class="project-desc">Product launch landing page built solo for a real client's brand, with email capture, deployed live.</p>
+        <div class="project-proof">proves &rarr; client-ready delivery, solo ownership start to finish</div>
+        <a href="https://panthos.ca/" target="_blank" rel="noopener" class="project-link">view_live &rarr;</a>
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="container py-5" data-animate>
-        <div class="row">
-            <div class="col-12">
-                <div class="glass-card">
-                    <div class="row align-items-center mb-3">
-                        <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
-                            <h2 class="mb-3">About Me</h2>
-                            <p>
-                                I'm a Computer Science student at <strong>Cégep Gérald-Godin</strong> and a QA Tester at
-                                <strong>Nomadis</strong>. I build full-stack web apps, ship games in game jams, and take
-                                on
-                                client projects on the side.
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <img src="img/nomadis.jpg" alt="Nomadis workplace"
-                                class="img-fluid rounded shadow-sm about-photo-top">
-                        </div>
-                    </div>
-                    <!-- Bottom Row -->
-                    <div class="row align-items-center mb-4">
-                        <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
-                            <img src="img/uncharted.jpg" alt="Gaming"
-                                class="img-fluid rounded shadow-sm about-photo-side" style="width: 70%; height: 200px;">
-                        </div>
-                        <div class="col-12 col-md-8 text-start">
-                            <p>
-                                One day, I want to design and release a game of my own — built from scratch.
-                                Whether it's building web apps or 3D game environments, I enjoy creating things that
-                                work and inspire.
-                            </p>
-                            <p>
-                                When I'm not building or debugging something, you'll probably find me on a trail with a
-                                backpack, chasing a good view.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Mountains -->
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="img/mountains.jpg" alt="Mountain landscape"
-                                class="img-fluid rounded shadow-sm mt-4"
-                                style="width: 100%; height: 200px; object-fit: cover; object-position: center 10%;">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="project-card">
+      <img src="./images/microblog.png" alt="Microblog app feed" class="project-img">
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-title">Microblog</div>
+          <div class="project-chips">
+            <span class="chip">React Native</span>
+            <span class="chip">Flask</span>
+            <span class="chip">WebSockets</span>
+          </div>
         </div>
-    </section>
+        <p class="project-desc">Real-time social app with JWT auth, live WebSocket notifications, and image posts.</p>
+        <div class="project-proof">proves &rarr; complex real-time feature development</div>
+        <a href="https://github.com/Zacab90/Microblog" target="_blank" rel="noopener" class="project-link">view_github &rarr;</a>
+      </div>
+    </div>
 
+  </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container py-5">
-        <h2 class="text-center mb-5 fade-delay-1" data-animate>Projects</h2>
-        <div class="row g-4 fade-delay-2" data-animate>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/magasin.png" class="card-img background-img" alt="Magasin Game">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <i class="bi bi-unity"></i>
-                        <h5 class="card-title mb-2">Magasin | Game Jam</h5>
-                        <p class="card-text small">
-                            A horror game built in 48 hours for an intercollege game jam. Escape a haunted thrift store
-                            while an NPC hunts you down.
-                        </p>
-                        <div class="mt-2">
-                            <a href="https://zacab90.itch.io/magasin"
-                                class="btn btn-alt btn-outline-primary btn-sm me-2">Itch.io</a>
-                            <!-- <a href="#" class="btn btn-outline-light btn-sm">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="section-label section-label--more">&gt; projects --more</div>
+  <div class="mini-projects">
+    <div class="mini-card">
+      <div class="mini-title">PopBazar</div>
+      <div class="mini-desc">PHP/MySQL classifieds platform, full MVC structure.</div>
+      <div class="mini-label">backend fundamentals</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-title">Port Scanner <span class="mini-badge">in_progress</span></div>
+      <div class="mini-desc">Python network port scanner, tested against a personal homelab.</div>
+      <div class="mini-label">cybersecurity prep</div>
+    </div>
+  </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/crisis_protocol.png" class="card-img background-img" alt="Crisis Protocol Game">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <i class="bi bi-unity"></i>
-                        <h5 class="card-title mb-2">Crisis Protocol | Game Jam</h5>
-                        <p class="card-text small">
-                            A space survival game built in 48 hours for an intercollege game jam. Survive random events,
-                            ship repairs and pirate raids while racing to reach your destination before time runs
-                            out.
-                        </p>
-                        <div class="mt-2">
-                            <a href="https://zacab90.itch.io/crisis-protocol"
-                                class="btn btn-alt btn-outline-primary btn-sm me-2">Itch.io</a>
-                            <!-- <a href="#" class="btn btn-outline-light btn-sm">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="section-label section-label--jams">&gt; projects --game-dev</div>
+  <div class="jam-desc">Two 48-hour intercollege game jam entries and an ongoing solo FPS, all built in Unity/C#.</div>
+  <div class="mini-projects">
+    <div class="mini-card">
+      <div class="mini-title">ProjectPZ <span class="mini-badge">in_progress</span></div>
+      <div class="mini-chips">
+        <span class="chip chip--sm">Unity</span>
+        <span class="chip chip--sm">C#</span>
+        <span class="chip chip--sm">solo</span>
+      </div>
+      <div class="mini-desc">Cyberpunk parkour FPS with wall-running, vaulting, climbing, melee combat, and enemy AI state machines.</div>
+      <div class="mini-label">systems engineering</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-title">Crisis Protocol</div>
+      <div class="mini-chips">
+        <span class="chip chip--sm">Unity</span>
+        <span class="chip chip--sm">C#</span>
+        <span class="chip chip--sm">48h jam</span>
+      </div>
+      <div class="mini-desc">Space survival game with custom AI enemies and physics-based mechanics.</div>
+      <a href="https://zacab90.itch.io/crisis-protocol" target="_blank" rel="noopener" class="mini-link">play &rarr;</a>
+    </div>
+    <div class="mini-card">
+      <div class="mini-title">Magasin</div>
+      <div class="mini-chips">
+        <span class="chip chip--sm">Unity</span>
+        <span class="chip chip--sm">C#</span>
+        <span class="chip chip--sm">48h jam</span>
+      </div>
+      <div class="mini-desc">Horror escape game with custom AI and hand-crafted level design.</div>
+      <a href="https://zacab90.itch.io/magasin" target="_blank" rel="noopener" class="mini-link">play &rarr;</a>
+    </div>
+  </div>
+</section>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/thesaurus.png" class="card-img background-img" alt="TheSaurus Game">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <i class="bi bi-filetype-js"></i>
-                        <h5 class="card-title mb-2">TheSaurus | School Project</h5>
-                        <p class="card-text small">
-                            A 3D maze game using HTML, JavaScript, and WebGL. Players find hidden chests, destroy walls,
-                            and avoid
-                            teleporters.
-                        </p>
-                        <div class="mt-2">
-                            <!-- <a href="#" class="btn btn-alt btn-outline-primary btn-sm me-2">Live Demo</a> -->
-                            <a href="https://github.com/bblanc03/3D-projet2"
-                                class="btn btn-outline-light btn-sm">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="skills">
+  <div class="section-label">&gt; skills --list</div>
+  <div class="skills-grid">
+    <div>
+      <div class="skills-category-label">Languages</div>
+      <div class="skills-chips">
+        <span class="skill-chip">C#</span>
+        <span class="skill-chip">JavaScript</span>
+        <span class="skill-chip">PHP</span>
+        <span class="skill-chip">SQL</span>
+        <span class="skill-chip">Python</span>
+      </div>
+    </div>
+    <div>
+      <div class="skills-category-label">Backend / Frameworks</div>
+      <div class="skills-chips">
+        <span class="skill-chip">ASP.NET Core</span>
+        <span class="skill-chip">ASP.NET WebForms</span>
+        <span class="skill-chip">Flask</span>
+        <span class="skill-chip">REST APIs</span>
+        <span class="skill-chip">MVC</span>
+      </div>
+    </div>
+    <div>
+      <div class="skills-category-label">Frontend</div>
+      <div class="skills-chips">
+        <span class="skill-chip">React</span>
+        <span class="skill-chip">React Native</span>
+        <span class="skill-chip">HTML/CSS</span>
+        <span class="skill-chip">Bootstrap</span>
+      </div>
+    </div>
+    <div>
+      <div class="skills-category-label">Tools</div>
+      <div class="skills-chips">
+        <span class="skill-chip">Git/GitHub/GitLab</span>
+        <span class="skill-chip">Docker</span>
+        <span class="skill-chip">Linux</span>
+        <span class="skill-chip">Rider / VS</span>
+        <span class="skill-chip">DBeaver</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/popbazar.png" class="card-img background-img" alt="PopBazar Screenshot">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <div><i class="bi bi-filetype-php"></i> <i class="bi bi-database"></i></div>
-                        <h5 class="card-title mb-2">PopBazar | School Project</h5>
-                        <p class="card-text small">
-                            A web-based classifieds platform built with PHP, MySQL, and Bootstrap. Features include
-                            authentication, ad
-                            creation, filtering, pagination, and full MVC structure.
-                        </p>
-                        <div class="mt-2">
-                            <!-- <a href="#" class="btn btn-alt btn-outline-primary btn-sm me-2">Live Demo</a> -->
-                            <a href="https://github.com/AdamsConquest/projet3"
-                                class="btn btn-outline-light btn-sm">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<footer class="footer">
+  <div>
+    <div class="footer-title">$ contact --send</div>
+    <div class="footer-sub">Open to internship &amp; contract work</div>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:zacbellerose@gmail.com" class="footer-link">zacbellerose@gmail.com</a>
+    <a href="https://linkedin.com/in/zachary-bellerose" target="_blank" rel="noopener" class="footer-link">linkedin.com/in/zachary-bellerose</a>
+    <a href="https://github.com/Zacab90" target="_blank" rel="noopener" class="footer-link">github.com/Zacab90</a>
+  </div>
+</footer>
+<div class="tiny-bar">// outside of code: hiking, gaming, a slow-burn FPS side project</div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/panthos.png" class="card-img background-img" alt="Panthos Website">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <div>
-                            <i class="bi bi-filetype-html"></i>
-                            <i class="bi bi-filetype-css"></i>
-                            <i class="bi bi-filetype-js"></i>
-                        </div>
-                        <h5 class="card-title mb-2">Panthos | Client Project</h5>
-                        <p class="card-text small">
-                            A product launch landing page built for a client's high-protein sauce brand. Designed and
-                            developed the site from scratch, integrated Mailchimp for waitlist signups, and deployed on
-                            Netlify.
-                        </p>
-                        <div class="mt-2">
-                            <a href="https://panthos.ca/" class="btn btn-alt btn-outline-primary btn-sm me-2">Visit
-                                Site</a>
-                            <!-- <a href="#" class="btn btn-outline-light btn-sm">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/petitespuces.png" class="card-img background-img" alt="Les Petites Puces Website">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <div>
-                            <i class="bi bi-filetype-jsx"></i>
-                        </div>
-                        <h5 class="card-title mb-2">Les Petites Puces | School Project</h5>
-                        <p class="card-text small">
-                            A full-stack e-commerce platform built with a team of 4 using React and ASP.NET Core.
-                            Features include user authentication, vendor management, product catalog with categories,
-                            and a shopping cart system.
-                        </p>
-                        <div class="mt-2">
-                            <a href="https://424r.cgodin.qc.ca/"
-                                class="btn btn-alt btn-outline-primary btn-sm me-2">Visit
-                                Site</a>
-                            <!-- <a href="#" class="btn btn-outline-light btn-sm">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card text-white border-0 position-relative overflow-hidden">
-                    <img src="img/microblog.png" class="card-img background-img" alt="Microblog Website">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
-                        <div>
-                            <i class="bi bi-filetype-jsx"></i>
-                        </div>
-                        <h5 class="card-title mb-2">Microblog | School Project</h5>
-                        <p class="card-text small">
-                            A real-time social media app built with React Native and Flask. Features include JWT
-                            authentication, image posts, follow systems, comments, likes, and live notifications via
-                            WebSocket.
-                        </p>
-                        <div class="mt-2">
-                            <a href="https://github.com/Zacab90/Microblog"
-                                class="btn btn-alt btn-outline-primary btn-sm me-2">GitHub</a>
-                            <!-- <a href="#" class="btn btn-outline-light btn-sm">GitHub</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
+</div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container py-5" data-animate>
-        <div class="glass-card">
-            <h2 class="d-flex justify-content-center fade-delay-1" data-animate>Skills</h2>
-            <div class="row">
-                <div class="col-12">
-                    <div class="skills-grid">
-                        <div>
-                            <h3 data-animate class="fade-delay-2">Frontend</h3>
-                            <ul data-animate class="fade-delay-3">
-                                <li>HTML <i class="bi bi-code-slash"></i></li>
-                                <li>CSS <i class="bi bi-filetype-css"></i></li>
-                                <li>JavaScript <i class="bi bi-filetype-js"></i></li>
-                                <li>Bootstrap <i class="bi bi-bootstrap"></i></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 data-animate class="fade-delay-2">Backend</h3>
-                            <ul data-animate class="fade-delay-3">
-                                <li>PHP <i class="bi bi-filetype-php"></i></li>
-                                <li>SQL <i class="bi bi-database"></i></li>
-                                <li>C# <i class="bi bi-filetype-cs"></i></li>
-                                <li>Java <i class="bi bi-cup-hot"></i></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 data-animate class="fade-delay-2">Frameworks</h3>
-                            <ul data-animate class="fade-delay-3">
-                                <li>React <i class="bi bi-filetype-jsx"></i></li>
-                                <li>ASP.NET Core <i class="bi bi-microsoft"></i></li>
-                                <li>Flask <i class="bi bi-flask"></i></li>
-                                <li>Bootstrap <i class="bi bi-bootstrap"></i></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 data-animate class="fade-delay-2">Tools & Platforms</h3>
-                            <ul data-animate class="fade-delay-3">
-                                <li>Git & GitHub / GitLab <i class="bi bi-git"></i></li>
-                                <li>VS Code / Visual Studio <i class="bi bi-microsoft"></i></li>
-                                <li>Unity <i class="bi bi-unity"></i></li>
-                                <li>Netlify <i class="bi bi-cloud-upload"></i></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 data-animate class="fade-delay-2">Other</h3>
-                            <ul data-animate class="fade-delay-3">
-                                <li>OOP <i class="bi bi-diagram-3"></i></li>
-                                <li>REST APIs <i class="bi bi-box-arrow-up-right"></i></li>
-                                <li>MVC Architecture <i class="bi bi-diagram-3"></i></li>
-                                <li>Linux / Terminal <i class="bi bi-terminal"></i></li>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { dark: true, copied: false };
 
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  toggleTheme = () => this.setState(s => ({ dark: !s.dark }));
 
-    <!-- Contact Section -->
-    <section id="contact" class="container py-5" data-animate>
-        <h2 class="text-center mb-5 fade-delay-1" data-animate>Contact Me</h2>
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8 mb-4 mb-lg-0 fade-delay-2" data-animate>
-                <form class="contact-form glass-card" action="https://formsubmit.co/ba02dcb668cf3d8ec7c888277cfed401 "
-                    method="POST">
-                    <input type="hidden" name="_next" value="https://zacab90.github.io/thank-you.html">
-                    <input type="hidden" name="_subject" value="New message from your portfolio!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-                    <h3 class="text-center">Email me</h3>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                    <div class="send-btn-wrapper">
-                        <button type="submit" class="btn btn-glass">Send</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 d-flex flex-column align-items-center align-items-lg-start fade-delay-2"
-                data-animate="">
-                <div class="social-links-box glass-card w-100">
-                    <h3 class="text-center">Find Me Online</h3>
-                    <div class="social-links d-flex justify-content-center gap-3">
-                        <a href="https://github.com/Zacab90"><i class="bi bi-github"></i></a>
-                        <a href="www.linkedin.com/in/zachary-bellerose-734588337"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/zach.0k/"><i class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="cv-download glass-card w-100 text-center mt-4 fade-delay-2" data-animate>
-                    <h4>Download My CV</h4>
-                    <div class="d-flex flex-column gap-2 ">
-                        <a href="docs/CV_French.pdf" class="btn btn-glass w-100" download>Télécharger en Français</a>
-                        <a href="docs/CV_English.pdf" class="btn btn-glass w-100" download>Download in English</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  handleContactClick = () => {
+    if (navigator.clipboard) navigator.clipboard.writeText('zacbellerose@gmail.com').catch(() => {});
+    this.setState({ copied: true });
+    clearTimeout(this._copyTimer);
+    this._copyTimer = setTimeout(() => this.setState({ copied: false }), 1800);
+  };
 
-    <!-- Footer -->
-    <footer class="custom-navbar mt-5 py-4 text-center">
-        <div class="container d-flex flex-column align-items-center gap-2">
-            <p class="text-white mb-1">© Zachary Bellerose - 2025</p>
-
-            <div class="d-flex gap-4 justify-content-center">
-                <a href="https://github.com/Zacab90" class="text-white fs-5">
-                    <i class="bi bi-github"></i>
-                </a>
-                <a href="https://ca.linkedin.com/in/zachary-bellerose-734588337" class="text-white fs-5">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/zach.0k/" class="text-white fs-5">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-
-
-
+  renderVals() {
+    const dark = this.state.dark;
+    const vars = dark ? {
+      bg: '#0b0d0b',
+      fg: '#e7e5df',
+      muted: '#8b8f87',
+      surface: '#121412',
+      border: 'rgba(255,255,255,.14)',
+      accent: '#6fe3a6',
+      accentSoft: 'rgba(111,227,166,.14)',
+      onAccent: '#0b0d0b',
+      chipBorder: 'rgba(255,255,255,.2)',
+      tinyBg: '#0b0d0b',
+      tinyFg: '#565a54'
+    } : {
+      bg: '#f7f9f6',
+      fg: '#14170f',
+      muted: '#5b625a',
+      surface: '#ffffff',
+      border: 'rgba(20,23,15,.14)',
+      accent: '#1f9d63',
+      accentSoft: 'rgba(31,157,99,.12)',
+      onAccent: '#ffffff',
+      chipBorder: 'rgba(20,23,15,.22)',
+      tinyBg: '#eef1ec',
+      tinyFg: '#5b625a'
+    };
+    return {
+      vars,
+      toggleTheme: this.toggleTheme,
+      handleContactClick: this.handleContactClick,
+      contactLabel: this.state.copied ? 'copied ✓' : 'contact()',
+      themeLabel: dark ? 'light_mode()' : 'dark_mode()'
+    };
+  }
+}
+</script>
 </body>
-
 </html>
